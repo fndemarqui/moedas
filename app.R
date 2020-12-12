@@ -26,7 +26,11 @@ ui <- fluidPage(
             numericInput(inputId = "n",
                          label = "Número de lançamentos",
                          value = 10),
-            actionButton("lancar", "Lançar!!!")
+            actionButton("lancar", "Lançar!!!"),
+            
+            textInput(inputId = "codigo",
+                      label = "Código disponível em:",
+                      value = "https://github.com/fndemarqui/moedas/blob/master/app.R ")
         ),
 
         # Show a plot of the generated distribution
