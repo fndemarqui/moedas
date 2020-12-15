@@ -28,9 +28,9 @@ ui <- fluidPage(
                          value = 10),
             actionButton("lancar", "Lançar!!!"),
             
-            textInput(inputId = "codigo",
-                      label = "Código disponível em:",
-                      value = "https://github.com/fndemarqui/moedas/blob/master/app.R ")
+            # textInput(inputId = "codigo",
+            #           label = "Código disponível em:",
+            #           value = "https://github.com/fndemarqui/moedas/blob/master/app.R ")
         ),
 
         # Show a plot of the generated distribution
@@ -43,7 +43,7 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-    
+    faces <- c("cara", "coroa")
     resultado <- reactive({
         input$lancar
         resultado <- tibble(
